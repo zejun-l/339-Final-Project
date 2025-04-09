@@ -49,7 +49,7 @@ nav a, #main {
 /* Hamburger menu */
 #hamburger-icon {
     display: flex;
-    font-size: 60px;
+    font-size: 55px;
     cursor: pointer;
     margin: 10px 30px;
     line-height: 1;
