@@ -54,7 +54,7 @@ nav a, #main {
     height: 25px;
     position: relative;
     justify-content: space-between;
-    margin-right: 35px;
+    margin-right: 33px;
     cursor: pointer;
     z-index: 1001; 
 }
