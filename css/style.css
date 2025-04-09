@@ -31,7 +31,7 @@ nav {
     width: 100%;
     align-items: center;
     justify-content: space-between; 
-    padding: 0 20px; 
+    padding: 0 10px;
 }
 
 nav a, #main {
@@ -43,7 +43,7 @@ nav a, #main {
     display: block;
     height: 50px;
     width: auto;
-    margin: 10px 20px;
+    margin: 10px 0;
 }
 
 /* Hamburger Icon */
@@ -54,7 +54,7 @@ nav a, #main {
     height: 25px;
     position: relative;
     justify-content: space-between;
-    margin-right: 33px;
+    margin-right: 10px;
     cursor: pointer;
     z-index: 1001; 
 }
@@ -161,7 +161,7 @@ h3, p {
     nav {
         flex-direction: row; 
         justify-content: space-between;
-        padding: 20px 5%;
+        margin-right: 25px;
     }
 
     .logo img {
