@@ -29,8 +29,10 @@ nav {
 .nav-header {
     display: flex;
     width: 100%;
-    align-items: center;
-    justify-content: space-between; 
+    align-items: flex-start; 
+    justify-content: space-between;
+    padding: 5px 10px; 
+    margin: 0; 
 }
 
 nav a, #main {
@@ -42,7 +44,7 @@ nav a, #main {
     display: block;
     height: 40px;
     width: auto;
-  
+    margin: 0; 
 }
 
 /* Hamburger Icon */
@@ -53,12 +55,10 @@ nav a, #main {
     height: 20px;
     position: relative;
     justify-content: space-between;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    margin: 0; 
     cursor: pointer;
     z-index: 1001; 
 }
-
 .hamburger span {
     height: 4px;
     background: var(--primary-color);
