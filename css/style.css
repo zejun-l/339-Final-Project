@@ -45,6 +45,7 @@ nav a, #main {
     margin: 10px 20px;
     display: block;
 }
+
 /* Hamburger menu */
 #hamburger-icon {
     display: flex;
@@ -133,7 +134,7 @@ h3, p {
 }
 
 /* ------------------------------------ Desktop View ------------------------------------ */
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
     nav {
         flex-direction: row; 
         justify-content: space-between;
@@ -157,7 +158,15 @@ h3, p {
         display: inline-block;
     }
 
+    .links a {
+        font-size: 25px; 
+    }
+
     #hamburger-icon {
         display: none;
+    }
+
+    h1 {
+        font-size: 40px;
     }
 }
