@@ -48,7 +48,7 @@ nav a, #main {
 /* Hamburger menu */
 #hamburger-icon {
     display: flex;
-    font-size: 40px;
+    font-size: 60px;
     cursor: pointer;
     margin: 10px 30px;
     line-height: 1;
