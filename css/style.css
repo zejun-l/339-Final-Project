@@ -31,7 +31,6 @@ nav {
     width: 100%;
     align-items: center;
     justify-content: space-between; 
-    padding: 0 10px;
 }
 
 nav a, #main {
@@ -41,20 +40,21 @@ nav a, #main {
 /* Wings logo in header */
 .logo img {
     display: block;
-    height: 50px;
+    height: 40px;
     width: auto;
-    margin: 10px 0;
+  
 }
 
 /* Hamburger Icon */
 .hamburger {
     display: flex;
     flex-direction: column;
-    width: 35px;
-    height: 25px;
+    width: 30px;
+    height: 22px;
     position: relative;
     justify-content: space-between;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     cursor: pointer;
     z-index: 1001; 
 }
