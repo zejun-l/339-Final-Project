@@ -1,8 +1,8 @@
 // Hamburger menu toggle
 const hamburgerIcon = document.getElementById('hamburger-icon');
-const navLinks = document.querySelector('.links');
+const mobileMenu = document.querySelector('.links');
 
 hamburgerIcon.addEventListener('click', function () {
-    navLinks.classList.toggle('show'); 
+  hamburgerIcon.classList.toggle('active');  
+  mobileMenu.classList.toggle('show');  
 });
-

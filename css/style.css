@@ -18,7 +18,7 @@ html {
 /* Navigation bar */
 nav {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -29,9 +29,9 @@ nav {
 .nav-header {
     display: flex;
     width: 100%;
-    align-items: center; /* Vertical alignment */
-    justify-content: space-between; /* Logo on left, hamburger on right */
-    padding: 0 10px; /* Optional: space from edges */
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 20px; 
 }
 
 nav a, #main {
@@ -40,20 +40,43 @@ nav a, #main {
 
 /* Wings logo in header */
 .logo img {
+    display: block;
     height: 50px;
     width: auto;
     margin: 10px 20px;
-    display: block;
 }
 
-/* Hamburger menu */
-#hamburger-icon {
+/* Hamburger Icon */
+.hamburger {
     display: flex;
-    font-size: 55px;
+    flex-direction: column;
+    width: 35px;
+    height: 25px;
+    position: relative;
+    justify-content: space-between;
+    margin-right: 35px;
     cursor: pointer;
-    margin: 10px 30px;
-    line-height: 1;
-    align-items: center;
+    z-index: 1001; 
+}
+
+.hamburger span {
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* X animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px); 
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; 
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px); 
 }
 
 /* Hamburger menu toggle */
