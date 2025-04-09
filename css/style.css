@@ -1,0 +1,163 @@
+/* ------------------------------------ Color Palette ------------------------------------ */
+:root {
+    --primary-color: #00274C;
+    --secondary-color: #FFCB05;
+    --accent-color: #3D85C6;
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+}
+
+/* ------------------------------------ Default Mobile View ------------------------------------ */
+html {
+    background-color: white;
+    scroll-behavior: smooth;
+    line-height: 1.2;
+    margin: inherit;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5%;
+}
+
+/* Container for logo and hamburger */
+.nav-header {
+    display: flex;
+    width: 100%;
+    align-items: center; /* Vertical alignment */
+    justify-content: space-between; /* Logo on left, hamburger on right */
+    padding: 0 10px; /* Optional: space from edges */
+}
+
+nav a, #main {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Wings logo in header */
+.logo img {
+    height: 50px;
+    width: auto;
+    margin: 10px 20px;
+    display: block;
+}
+/* Hamburger menu */
+#hamburger-icon {
+    display: flex;
+    font-size: 28px;
+    cursor: pointer;
+    margin: 10px 30px;
+    line-height: 1;
+    align-items: center;
+}
+
+/* Hamburger menu toggle */
+.links.show {
+    display: block;
+}
+
+.links li {
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Navigation bar links */
+.links {
+    display: none;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Styling for navigation bar links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.btn:hover, a.btn.active:hover {
+    color: var(--accent-color);
+    transition: 0.3s;
+}
+
+a.btn:focus, a.btn.active:focus {
+    color: var(--accent-color);
+}
+
+a.btn.active, a.btn.active:hover, a.btn.active:focus {
+    color: var(--accent-color);
+    padding-bottom: 5px;
+    border-bottom: 3px solid rgb(253, 253, 253);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Styling for skip to main */
+.skip a {
+    position: absolute;
+    font-family: 'Rajdhani', sans-serif;
+    top: -40px;
+    margin-left: 10px;
+}
+
+.skip a:hover, .skip a:focus {
+    color: black;
+    text-decoration: underline;
+}
+
+body a:focus {
+    top: 10px;
+    transition: 0.5s;
+}
+
+/* Styling for h, p */
+h1, h2, h3 {
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h3, p {
+    font-family: 'Rajdhani';
+    font-size: 14px;
+}
+
+/* ------------------------------------ Desktop View ------------------------------------ */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row; 
+        justify-content: space-between;
+        padding: 20px 5%;
+    }
+
+    .logo img {
+        height: 70px; 
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    .links li {
+        padding: 10px 20px;
+        display: inline-block;
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
+}
