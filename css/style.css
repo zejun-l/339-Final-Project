@@ -13,6 +13,7 @@ html {
     scroll-behavior: smooth;
     line-height: 1.2;
     margin: inherit;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 /* Navigation bar */
@@ -33,10 +34,6 @@ nav {
     justify-content: space-between;
     padding: 5px 10px; 
     margin: 0; 
-}
-
-nav a, #main {
-    font-family: 'Rajdhani', sans-serif;
 }
 
 /* Wings logo in header */
@@ -69,7 +66,7 @@ nav a, #main {
 
 /* X animation */
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px); 
+    transform: rotate(45deg) translate(3px, 4px); 
 }
 
 .hamburger.active span:nth-child(2) {
@@ -119,13 +116,12 @@ a.btn.active, a.btn.active:hover, a.btn.active:focus {
     color: var(--accent-color);
     padding-bottom: 5px;
     border-bottom: 3px solid rgb(253, 253, 253);
-    font-family: 'Rajdhani', sans-serif;
+   
 }
 
 /* Styling for skip to main */
 .skip a {
     position: absolute;
-    font-family: 'Rajdhani', sans-serif;
     top: -40px;
     margin-left: 10px;
 }
@@ -142,7 +138,6 @@ body a:focus {
 
 /* Styling for h, p */
 h1, h2, h3 {
-    font-family: 'Rajdhani', sans-serif;
     text-align: center;
 }
 
@@ -153,23 +148,39 @@ h1 {
     margin-top: 20px;
 }
 
-h3, p {
-    font-family: 'Rajdhani';
-    font-size: 14px;
+p {
+    font-size: 16px;
+    margin: 20px;
+    padding: 30px;
+}
+
+/* Homepage photo styling */
+#homepage-photo {
+    display: block;
+    width: 100%;
+}
+
+/* Footer styling */
+#footer {
+    font-size: 12px;
+    text-align: center;
 }
 
 /* ------------------------------------ Desktop View ------------------------------------ */
 @media (min-width: 1440px) {
+    /* Navigation bar */
     nav {
         flex-direction: row; 
         justify-content: space-between;
         margin-right: 25px;
     }
-
+    
+    /* Styling for wings logo */
     .logo img {
         height: 70px; 
     }
 
+    /* Navigation bar links */
     .links {
         display: flex;
         flex-direction: row;
@@ -179,19 +190,41 @@ h3, p {
     }
 
     .links li {
-        padding: 10px 20px;
         display: inline-block;
+        padding: 10px 20px;
     }
 
     .links a {
         font-size: 25px; 
     }
 
+    /* Remove hamburger icon */
     #hamburger-icon {
         display: none;
     }
 
+    /* Styling for h1, */
     h1 {
         font-size: 40px;
     }
+
+    p {
+        font-size: 24px;
+        
+    }
+
+    /* Homepage photo styling */
+    #homepage-photo {
+        height: 80vh;
+        object-fit: cover;  
+    }
+    
+    /* Footer styling */
+    #footer {
+        font-size: 16px;
+        text-align: center;
+    }
+    
 }
+
+

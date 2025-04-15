@@ -33,13 +33,18 @@
         <h1>Michigan Flywheel</h1>
     </header>
     <main>
-        <div id="main">
-            <!-- Album 1 -->
-            <div class="">
-                <img src="" width="200" alt="">
-            </div>
-        </div>
+      <img id="homepage-photo" src="images/NWC_EmmaOttosen_TeamPhotos-3.jpg" alt="Flywheel team photo">
+      <div id="main">
+        <p>We are the University of Michigan's Women's Ultimate Frisbee team. Based out of Ann Arbor, MI, we travel across the country to compete against other high-level programs. Flywheel is made up of many different players, from freshmen who picked up their first disc at fall tryouts to grad students who have been playing for years. We take pride in being a nationally competitive team that continues to grow and work hard each year.</p>
+          
+      </div>
     </main>
+
+    <footer> 
+      <p id="footer">© <span id="year"></span> Flywheel Ultimate</p>
+    </footer>
+    
+    <script> document.getElementById("year").innerHTML = new Date().getFullYear(); </script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
