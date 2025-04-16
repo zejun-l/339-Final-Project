@@ -222,7 +222,6 @@ p {
     justify-items: center;
 }
   
-  
 .card {
     position: relative;
     width: 250px;
@@ -247,7 +246,6 @@ p {
 .card .face.face1 {
     box-sizing: border-box;
     padding: 10px;
-    
 }
 
 .card .face.face1 h2 {
