@@ -3,37 +3,59 @@
     --primary-color: #00274C;
     --secondary-color: #FFCB05;
     --accent-color: #3D85C6;
+    --accent-color-2: #7bbde1;
+    --accent-color-3: #75988d;
     --background-color: #f0f0f0;
     --text-color: #333333;
 }
 
-/* ------------------------------------ Default Mobile View ------------------------------------ */
-html {
+/* ------------------------------------ Base Styles ------------------------------------ */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rajdhani', sans-serif;
     background-color: white;
     scroll-behavior: smooth;
     line-height: 1.2;
-    margin: inherit;
-    font-family: 'Rajdhani', sans-serif;
 }
 
 /* Navigation bar */
 nav {
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
     align-items: center;
     justify-content: center;
     padding: 20px 5%;
+    background-color: white;
+    z-index: 1000;
+}
+
+/* Push content below fixed nav */
+main {
+    flex: 1;
+    margin-top: 20px;
 }
 
 /* Container for logo and hamburger */
 .nav-header {
     display: flex;
     width: 100%;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 5px 10px; 
-    margin: 0; 
+    padding: 5px 10px;
+    margin: 0;
 }
 
 /* Wings logo in header */
@@ -41,7 +63,7 @@ nav {
     display: block;
     height: 40px;
     width: auto;
-    margin: 0; 
+    margin: 0;
 }
 
 /* Hamburger Icon */
@@ -52,11 +74,12 @@ nav {
     height: 20px;
     position: relative;
     justify-content: space-between;
-    margin: 0; 
+    margin: 0;
     margin-top: 7px;
     cursor: pointer;
-    z-index: 1001; 
+    z-index: 1001;
 }
+
 .hamburger span {
     height: 4px;
     background: var(--primary-color);
@@ -66,15 +89,15 @@ nav {
 
 /* X animation */
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(3px, 4px); 
+    transform: rotate(45deg) translate(3px, 4px);
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0; 
+    opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(8px, -8px); 
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* Hamburger menu toggle */
@@ -116,7 +139,6 @@ a.btn.active, a.btn.active:hover, a.btn.active:focus {
     color: var(--accent-color);
     padding-bottom: 5px;
     border-bottom: 3px solid rgb(253, 253, 253);
-   
 }
 
 /* Styling for skip to main */
@@ -136,7 +158,7 @@ body a:focus {
     transition: 0.5s;
 }
 
-/* Styling for h, p */
+/* Styling for headings and paragraphs */
 h1, h2, h3 {
     text-align: center;
 }
@@ -145,7 +167,7 @@ h1 {
     color: var(--primary-color);
     font-size: 2em;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 140px;
 }
 
 p {
@@ -160,27 +182,146 @@ p {
     width: 100%;
 }
 
+/* Spotify styling */
+#spotify {
+    width: 80%;
+    margin: 30px auto;
+}
+
+#spotify h2 {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
 /* Footer styling */
 #footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#footer p {
     font-size: 12px;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Roster cards styling */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    justify-items: center;
+}
+  
+  
+.card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 15px 60px rgba(0,0,0, .5);
+    border-radius: 15px;
+}
+
+.card .face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .face.face1 {
+    box-sizing: border-box;
+    padding: 10px;
+    
+}
+
+.card .face.face1 h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 1em;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.card .face.face1 p {
+    margin-top: 10px; 
+    padding: 0;
+    font-size: 0.6em;
+}
+
+.card .face.face1 .content {
+    font-size: 1.8em;
+    font-weight: 500;
+    width: 100%;
     text-align: center;
 }
 
+.card .face.face2 {
+    background: #111;
+    transition: 0.5s;
+}
+
+
+.card .face.face2 {
+    background: var(--accent-color);
+    border-radius: 15px;
+}
+
+.card:hover .face.face2 {
+    height: 60px;
+    border-radius: 0 0 15px 15px;
+}
+
+.card .face.face2:before {
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+}
+
+.card .face.face2 h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0,0,0, .2);
+}
+
+.card:hover .face.face2 h2 {
+    font-size: 1.5em;
+}
+
+
 /* ------------------------------------ Desktop View ------------------------------------ */
 @media (min-width: 1440px) {
-    /* Navigation bar */
     nav {
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
         margin-right: 25px;
     }
-    
-    /* Styling for wings logo */
+
+    /* Wings logo resizing */
     .logo img {
-        height: 70px; 
+        height: 70px;
     }
 
-    /* Navigation bar links */
+    /* Nav links resizing */
     .links {
         display: flex;
         flex-direction: row;
@@ -195,36 +336,44 @@ p {
     }
 
     .links a {
-        font-size: 25px; 
+        font-size: 25px;
     }
 
-    /* Remove hamburger icon */
+    /* Remove hamburger menu */
     #hamburger-icon {
         display: none;
     }
 
-    /* Styling for h1, */
+    /* h1 resizing */
     h1 {
         font-size: 40px;
     }
 
+    /* p resizing */
     p {
         font-size: 24px;
-        
+        padding: 40px;
+        margin: 20px 60px;
     }
 
-    /* Homepage photo styling */
+    /* Homepage photo resizing */
     #homepage-photo {
         height: 80vh;
-        object-fit: cover;  
+        object-fit: cover;
     }
-    
-    /* Footer styling */
-    #footer {
+
+    /* Spotify resizing */
+    #spotify {
+        width: 60%;
+        margin: 40px auto;
+    }
+
+    #spotify h2 {
+        font-size: 24px;
+    }
+
+    #footer p {
         font-size: 16px;
-        text-align: center;
     }
     
 }
-
-
