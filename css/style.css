@@ -5,11 +5,11 @@
     --accent-color: #3D85C6;
     --accent-color-2: #7bbde1;
     --accent-color-3: #75988d;
-    --background-color: #f0f0f0;
+    --background-color: #FFFFFF;
     --text-color: #333333;
 }
 
-/* ------------------------------------ Base Styles ------------------------------------ */
+/* ------------------------------------ Default Mobile Styling ------------------------------------ */
 html, body {
     height: 100%;
     margin: 0;
@@ -148,10 +148,17 @@ a.btn.active, a.btn.active:hover, a.btn.active:focus {
     margin-left: 10px;
 }
 
-.skip a:hover, .skip a:focus {
+.skip a:focus {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: white;
     color: black;
-    text-decoration: underline;
+    padding: 8px 12px;
+    border: 2px solid var(--primary-color);
+    z-index: 10000;
 }
+
 
 body a:focus {
     top: 10px;
@@ -307,6 +314,70 @@ p {
     font-size: 1.5em;
 }
 
+/* Gallery styling */
+.gallery-container {
+    padding: 3rem 2rem;
+    background-color: var(--background-color);
+  }
+  
+  .holographic-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .holographic-card {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 3 / 2;
+    background: #111;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 0 transparent;
+  }
+  
+  .holographic-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .holographic-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      0deg,
+      transparent,
+      transparent 30%,
+      rgba(61, 133, 198, 0.3) 
+    );
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  
+  .holographic-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(61, 133, 198, 0.5); 
+  }
+  
+  .holographic-card:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+  }
+  
 
 /* ------------------------------------ Desktop View ------------------------------------ */
 @media (min-width: 1440px) {
