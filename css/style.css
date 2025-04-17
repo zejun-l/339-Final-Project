@@ -380,7 +380,7 @@ p {
 #social-media ul {
     display: flex;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -439,6 +439,77 @@ p {
 
 #social-media ul li:nth-child(2) a:before{
     background: #55acee;
+}
+
+#social-media p {
+    text-align: center;
+}
+
+/* Email styling */
+#email {
+    width: 90%;
+    margin: auto;
+}
+#email p {
+    margin: 5px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+#email p:nth-child(2), #email p:nth-child(5) {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* 404 page styling */
+#errorpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+#errorpage main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#errorpage h1 {
+    font-size: 100px;
+    color: #00274C;
+    background-color: white;
+}
+
+#errorpage p {
+    font-size: 40px;
+    color: black;
+    margin: 20px;
+}
+
+#homebutton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    background-color: #003366;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#homebutton:hover {
+    background-color: #75988d;
+}
+
+#errorpage footer p {
+    font-size: 20px;
 }
 
 /* ------------------------------------ Desktop View ------------------------------------ */
@@ -508,5 +579,14 @@ p {
     #footer p {
         font-size: 16px;
     }
+
+    /* Social media icons styling  */
+    #social-media ul {
+        top: 75%;
+    }
     
+    /* Email styling */
+    #email {
+        width: 70%;
+    }
 }
