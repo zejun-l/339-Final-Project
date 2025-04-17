@@ -461,6 +461,50 @@ p {
     font-weight: 700;
 }
 
+/* 404 page styling */
+#error-page {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+#error-page h1 {
+    font-size: 100px;
+}
+
+#error-page p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#home-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 6px var(--accent-color-2);
+    transition: all 0.2s ease;
+    transform: translateY(0);
+}
+
+#home-button:hover {
+    background-color: var(--accent-color-2);
+    box-shadow: 0 4px var(--accent-color);
+    transform: translateY(-2px);
+}
+
+#home-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #001f3f;
+}
+
 /* ------------------------------------ Desktop View ------------------------------------ */
 @media (min-width: 1440px) {
     nav {
@@ -537,5 +581,14 @@ p {
     /* Email styling */
     #email {
         width: 70%;
+    }
+
+    /* 404 page styling */
+    #error-page h1 {
+        font-size: 150px;
+    }
+    
+    #error-page p { 
+        font-size: 40px;
     }
 }
