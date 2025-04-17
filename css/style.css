@@ -383,6 +383,7 @@ p {
     flex-wrap: wrap;
     position: static;
     transform: none;
+    margin-bottom: 40px;
 }
 
 #social-media ul li {
