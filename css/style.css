@@ -383,7 +383,6 @@ p {
     flex-wrap: wrap;
     position: static;
     transform: none;
-    margin-bottom: 40px;
 }
 
 #social-media ul li {
@@ -589,3 +588,11 @@ p {
         font-size: 40px;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
