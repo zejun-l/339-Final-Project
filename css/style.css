@@ -597,7 +597,7 @@ p {
     }
 }
 
-/* Prefers reduduced motion media query for accessibility */
+/* Prefers reduced motion media query for accessibility */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation: none !important;
