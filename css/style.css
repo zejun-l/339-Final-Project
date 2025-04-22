@@ -61,7 +61,7 @@ main {
 /* Wings logo in header */
 #logo {
     display: block;
-    height: 70px;
+    height: 40px;
     width: auto;
     margin: 0;
 }
@@ -515,7 +515,7 @@ p {
     }
 
     /* Wings logo resizing */
-    .logo img {
+    #logo {
         height: 70px;
     }
 
