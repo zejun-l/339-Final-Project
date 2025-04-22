@@ -458,7 +458,7 @@ p {
 }
 
 #email p:nth-child(2), #email p:nth-child(5) {
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-weight: 700;
 }
 
