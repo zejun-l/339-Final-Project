@@ -451,13 +451,13 @@ p {
     width: 90%;
     margin: auto;
 }
-#email h2, h3, h4, p {
+#email h2, h3, h4, h5, h6 {
     margin: 5px 20px;
     padding: 10px;
     text-align: center;
 }
 
-#email p:nth-child(2), #email p:nth-child(4) {
+#email h3, h5 {
     color: var(--primary-color);
     font-weight: 700;
 }
@@ -579,14 +579,12 @@ p {
         width: 70%;
     }
 
-    #email p {
+    #email h2, h3, h4, h5, h6 {
+        font-size: 24px;
+        text-align: center;
         margin-bottom: 40px;
         padding: 0;
-        text-align: center;
-    }
-
-    #email h2, h3, h4 {
-        font-size: 24px;
+        
     }
 
     /* 404 page styling */
